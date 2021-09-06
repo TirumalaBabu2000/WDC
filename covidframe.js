@@ -63,9 +63,9 @@ console.log("Successful");
 
     tableau.registerConnector(myConnector);
 })();
-$(document).ready(function () {
-    $("#submitButton").click(function () {
-        tableau.connectionName = "Covid Feed";
-        tableau.submit();
-    });
-});
+document.querySelector("#getData").addEventListener("click", getData);
+
+function getData() {
+  tableau.connectionName = "Dutch Corona Numbers";
+  tableau.submit();
+}
